@@ -1,0 +1,8 @@
+{
+  "languageName": "English (United Kingdom)",
+  "undefinedError": "§r(Translator) Unfortunately, an unknown error has occurred.",
+  "dropdownDontPoint": "Do not specify",
+  "formIncorrectData": "§r(Translator) Please enter valid data into the fields.",
+  "commandTranslatorDescription": "Open translator settings.",
+  "commandExecutionOnlyForPlayer": "§r(Translator) Only players can execute this command."
+}

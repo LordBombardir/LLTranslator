@@ -1,0 +1,8 @@
+{
+  "languageName": "Русский (Россия)",
+  "undefinedError": "§r(Переводчик) К сожалению, произошла неизвестная ошибка..",
+  "dropdownDontPoint": "Не указывать",
+  "formIncorrectData": "§r(Переводчик) Пожалуйста, введите корректные данные в поля.",
+  "commandTranslatorDescription": "Открыть настройки переводчика.",
+  "commandExecutionOnlyForPlayer": "§r(Переводчик) Только игроки могут выполнять данную команду."
+}

@@ -6,6 +6,8 @@
 
 namespace translator {
 
+std::unique_ptr<ll::i18n::I18n> LanguageManager::i18n = nullptr;
+
 bool LanguageManager::init(ll::mod::NativeMod& mod) {
     i18n = std::make_unique<ll::i18n::I18n>();
 

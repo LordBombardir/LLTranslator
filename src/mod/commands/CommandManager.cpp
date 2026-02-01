@@ -1,5 +1,6 @@
 #include "CommandManager.h"
 #include "types/translator/TranslatorCommand.h"
+#include "mod/Main.h"
 
 #include <ll/api/command/CommandHandle.h>
 #include <ll/api/command/CommandRegistrar.h>
@@ -18,6 +19,8 @@ bool CommandManager::registerCommands() {
 #else
     bool isClientSide = true;
 #endif
+
+    Main::getInstance().getSelf().getLogger().info("Registering Translator command... isClientSide = {}", isClientSide);
 
     // clang-format off
     ll::command::CommandHandle& translatorCommand = ll::command::CommandRegistrar::getInstance(isClientSide).getOrCreateCommand(

@@ -4,7 +4,7 @@ namespace translator {
 
 class CommandManager final {
 public:
-    static bool registerCommands();
+    static bool registerCommands(bool isClientSide);
 };
 
 } // namespace translator

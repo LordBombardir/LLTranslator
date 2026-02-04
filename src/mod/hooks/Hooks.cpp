@@ -66,6 +66,11 @@ LL_TYPE_INSTANCE_HOOK(
         player.getRealName()
     );
     origin(player);
+
+    if (!player.mIsHostingPlayer) {
+        Main::getInstance().getSelf().getLogger().info("This is a client-side player.");
+        CommandManager::registerCommands(true);
+    }
 }
 
 LL_TYPE_INSTANCE_HOOK(
@@ -85,7 +90,7 @@ LL_TYPE_INSTANCE_HOOK(
 
 void Hooks::setup() {
 #ifdef LL_PLAT_C
-    RegisterClientCommands::hook();
+    // RegisterClientCommands::hook();
 
     EnableModFirstTest::hook();
     EnableModSecondTest::hook();

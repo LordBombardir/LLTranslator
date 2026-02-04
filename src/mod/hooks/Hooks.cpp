@@ -57,7 +57,7 @@ LL_TYPE_INSTANCE_HOOK(
     EnableModSecondTest,
     ll::memory::HookPriority::Normal,
     LegacyClientNetworkHandler,
-    &LegacyClientNetworkHandler::onPlayerReady,
+    &LegacyClientNetworkHandler::$onPlayerReady,
     void,
     Player& player
 ) {

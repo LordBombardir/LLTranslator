@@ -20,7 +20,7 @@ bool MainManager::initModWhileLoading(ll::mod::NativeMod& mod) {
     return true;
 }
 
-bool MainManager::initModWhileEnabling(ll::mod::NativeMod& mod) {
+bool MainManager::initModWhileEnabling([[maybe_unused]] ll::mod::NativeMod& mod) {
 #ifdef LL_PLAT_S
     if (!CommandManager::registerCommands(false)) {
         mod.getLogger().error("Failed to register commands!");

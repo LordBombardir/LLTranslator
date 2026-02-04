@@ -4,15 +4,15 @@ add_repositories("levimc-repo https://github.com/LiteLDev/xmake-repo.git")
 add_repositories("lordbombardir-repo https://github.com/LordBombardir/xmake-repo.git")
 
 if is_config("target_type", "server") then
-    add_requires("levilamina 1.9.2", {configs = {target_type = "server"}})
+    add_requires("levilamina 1.9.4", {configs = {target_type = "server"}})
 else
-    add_requires("levilamina 1.9.2", {configs = {target_type = "client"}})
+    add_requires("levilamina 1.9.4", {configs = {target_type = "client"}})
 end
 
 if is_config("target_type", "server") then
-    add_requires("placeholderapi 1.0.0", {configs = {target_type = "server", mode = "release"}})
+    add_requires("placeholderapi 1.0.1", {configs = {target_type = "server", mode = "release"}})
 else
-    add_requires("placeholderapi 1.0.0", {configs = {target_type = "client", mode = "release"}})
+    add_requires("placeholderapi 1.0.1", {configs = {target_type = "client", mode = "release"}})
 end
 
 add_requires("levibuildscript")

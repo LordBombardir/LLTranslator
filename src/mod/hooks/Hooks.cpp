@@ -1,4 +1,5 @@
 #include "Hooks.h"
+#include "../Main.h"
 #include "../commands/CommandManager.h"
 
 #include <ll/api/memory/Hook.h>
@@ -44,8 +45,12 @@ LL_TYPE_STATIC_HOOK(
     MinecraftCommands& minecraftCommands,
     IMinecraftGame&    minecraftClient
 ) {
+    Main::getInstance().getSelf().getLogger().info("ClientCommands::setupStartMenuScreen called");
+
     if (!minecraftClient.isHostingLocalDedicatedServer()) {
         origin(minecraftCommands, minecraftClient);
+
+        Main::getInstance().getSelf().getLogger().info("Register client-side commands");
 
         CommandManager::registerCommands(true);
         return;
